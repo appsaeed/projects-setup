@@ -1,6 +1,4 @@
 //dependencies
-import React from "react";
-import ReactDOM from "react-dom/client";
 //css
 import "./assets/index.css";
 //page or components
@@ -13,8 +11,4 @@ const maindomid: string = import.meta.env.VITE_MAINDOM || "%VITE_MAINDOM%";
 const element = document.getElementById(maindomid) as HTMLElement;
 
 //render frontend framework
-ReactDOM.createRoot(element).render(
-  <React.StrictMode>
-    <Welcome />
-  </React.StrictMode>
-);
+element.innerHTML = Welcome();

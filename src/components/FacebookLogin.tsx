@@ -13,7 +13,7 @@ export default function FacebookLoginIframe({
   origin = window.location.origin,
   domain = window.location.host,
   title = "",
-  style = {},
+  style = "",
 }) {
   //local array
   const o_types = ["continue_with", "login_with"];
@@ -50,21 +50,19 @@ export default function FacebookLoginIframe({
   uri += `&use_continue_as=${contnue}`;
   uri += `&${__scope}`;
 
-  return (
+  return `
     <iframe
-      title={__title}
+      title="${__title}"
       frameBorder="0"
-      allowFullScreen={true}
+      allowFullScreen="true"
       scrolling="no"
       allow="encrypted-media"
-      src={uri}
-      style={{
-        border: "none",
-        visibility: "visible",
-        width: __width,
-        height: _height,
-        ...style,
-      }}
+      src="${uri}"
+      style=" border: none;
+      visibility: visible;
+      width: ${__width};
+      height: ${_height};
+      ${style}"
     ></iframe>
-  );
+    `;
 }
