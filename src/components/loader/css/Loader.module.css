@@ -1,0 +1,73 @@
+.appsaeed_loaders {
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    background: #eff1f6;
+    width: 100%;
+    height: 2em;
+    background: rgb(233, 236, 239);
+    border-radius: 4px;
+}
+
+.appsaeed_loaders::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 500px;
+    top: 0;
+    left: -500px;
+    background-image: linear-gradient(90deg,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0));
+    animation: appsaeed_animation 1.2s ease-in-out infinite;
+}
+
+@keyframes appsaeed_animation {
+    0% {
+        left: -500px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+/* loader customize for setting loaders  */
+
+
+.profile{
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.setting_list {
+    width: 80%;
+    margin: auto;
+    height: 60px;
+    margin-top: 30px ;
+    margin-bottom: 30px;    
+}
+
+.dashboard{
+    margin: auto;
+    width: 96%;
+    height: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card{
+    width: 46%;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 236px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
