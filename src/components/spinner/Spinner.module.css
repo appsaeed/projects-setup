@@ -1,0 +1,136 @@
+:root {
+  --preload-color-background: #212121;
+  --preload-color-foreground: #ffffff;
+  --preload-color-accent: #03a9f4;
+  --preload-gap: 36px;
+  --preload-icon-size: 128px;
+  --preload-font: 2em Roboto, arial, sans-serif;
+  --preload-title: "CODEPEN";
+  --preload-spinner-size: 32px;
+  --preload-spinner-width: 3px;
+}
+
+.preloader_spinner {
+  /* position: fixed; */
+  bottom: var(--preload-gap);
+  left: calc(50vw - calc(var(--preload-spinner-size) / 2px));
+  width: var(--preload-spinner-size);
+  height: var(--preload-spinner-size);
+  animation: preloader-spinner 1s linear infinite;
+}
+
+.preloader_spinner_icon {
+  width: var(--preload-spinner-size);
+  height: var(--preload-spinner-size);
+  stroke: var(--preload-color-foreground);
+  stroke-width: var(--preload-spinner-width);
+  stroke-dasharray: 314%, 314%;
+  animation: preloader-spinner-icon-anim 1s linear infinite alternate;
+}
+
+@keyframes preloader-logo-anim {
+  0% {
+    filter: opacity(0);
+    transform: translateY(-30px);
+  }
+
+  100% {
+    filter: opacity(1);
+    transform: translateY(0);
+  }
+}
+
+@keyframes preloader-title-anim {
+  0% {
+    filter: opacity(0);
+  }
+
+  100% {
+    filter: opacity(1);
+  }
+}
+
+@keyframes preloader-spinner {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-spinner-icon-anim {
+  0% {
+    stroke-dasharray: 0%, 314%;
+  }
+
+  100% {
+    stroke-dasharray: 314%, 314%;
+  }
+}
+
+/*
+ *
+ * CSS Dot loader
+ */
+.dot-dot-loader {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  color: #fff;
+  box-sizing: border-box;
+  animation: dotdotLoader 0.1s linear infinite alternate;
+}
+
+@keyframes dotdotLoader {
+  0% {
+    box-shadow: -38px -12px, -14px 0, 14px 0, 38px 0;
+  }
+  33% {
+    box-shadow: -38px 0px, -14px -12px, 14px 0, 38px 0;
+  }
+  66% {
+    box-shadow: -38px 0px, -14px 0, 14px -12px, 38px 0;
+  }
+  100% {
+    box-shadow: -38px 0, -14px 0, 14px 0, 38px -12px;
+  }
+}
+
+/*
+ * dot progerss 
+ */
+
+.dot_progress {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  margin: 0px auto;
+  color: var(--preload-color-foreground);
+  box-sizing: border-box;
+  animation: dotprogress 0.5s linear infinite;
+}
+
+@keyframes dotprogress {
+  0% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+  25% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 2px;
+  }
+  50% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 -2px, -14px 0 0 2px, -38px 0 0 -2px;
+  }
+  75% {
+    box-shadow: 14px 0 0 2px, 38px 0 0 -2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+  100% {
+    box-shadow: 14px 0 0 -2px, 38px 0 0 2px, -14px 0 0 -2px, -38px 0 0 -2px;
+  }
+}
