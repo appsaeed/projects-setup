@@ -14,7 +14,7 @@ export default function Welcome() {
           Github Source:{" "}
           <a
             className="text-blue-600"
-            href="http://github.com/appsaeed/project-setup"
+            href="https://github.com/appsaeed/project-setup/tree/vite-react-ts"
             target="_blank"
             rel="noopener noreferrer"
           >
