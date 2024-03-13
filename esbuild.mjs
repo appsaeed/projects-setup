@@ -5,7 +5,8 @@ build({
   bundle: true,
   minify: true,
   outdir: 'dist',
-  sourcemap: false
+  sourcemap: false,
+  platform: 'node'
 }).then(function(){
     console.log('', 'Aplication was successfully built')
 }).catch(function(err){
