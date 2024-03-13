@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node build/index.js",
-    "dev" : "npx nodemon",
-    "build": "rimraf ./build && tsc"
+    "dev": "nodemon",
+    "start": "node ./build/index.js",
+    "build" : "rimraf ./build ./dist && tsc && esbuild ./build/index.js --bundle --minify --sourcemap --platform=node --outfile=./dist/index.js && rimraf ./build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.26",
+    "esbuild": "^0.20.1",
+    "esbuild-node-tsc": "^2.0.5",
     "nodemon": "^3.1.0",
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",

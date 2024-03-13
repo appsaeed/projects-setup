@@ -1,2 +1,3 @@
+import { random } from "./utiles";
 
-console.log('Hello world! \n Happy programming')
+console.log('random number: ', random())
