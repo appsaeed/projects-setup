@@ -4,7 +4,7 @@ Quickly set up your JavaScript, TypeScript, Node.js, Vite, and esbuild project w
 Jump to your project's main focus more than setup environment and file structures
 Project setup with utility implementation 
 
-## How to works
+## How to start
 1. go to the repository branch and find out the stack you choose the branch name and stack name are the same and included
 2. Download your chosen branch code extract it to your local computer and open the files and folders
 3. if you don't like downloading you might use git clone or pull  from your terminal
