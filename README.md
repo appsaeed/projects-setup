@@ -1,4 +1,5 @@
 ## Javascript + Typescript Project Setup
+Quickly set up your JavaScript, TypeScript, Node.js, Vite, and esbuild project with well-structured directories and useful utilities. Access pre-built implementation snippets to enhance your development workflow and focus on your project's main objectives
 ### It is important to check out more branches than rely on the main branch
 Jump to your project's main focus more than setup environment and file structures
 Project setup with utility implementation 
